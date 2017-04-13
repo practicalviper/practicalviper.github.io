@@ -30,13 +30,13 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container ">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">WebSiteName</a>
+          <a class="navbar-brand" href="#">Practical VIPER</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Table of Contents</a></li>
           <li><a href="#">Free Chapters</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><button class="btn btn-danger navbar-btn">BUY</button></li>
+          <li><button class="btn btn-warning navbar-btn" id="open-popup">BUY NOW</button></li>
         </ul>
       </div>
     </nav>
@@ -112,6 +112,19 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false">
+        
+    </script>
+
+    <script type="text/javascript">
+        function showMailingPopUp() {
+            require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us15.list-manage.com","uuid":"f53ec3be6d38c9c5cc733e7b0","lid":"be2dbf05ec"}) })
+            document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        };
+
+        document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+    </script>
 
 </body>
 
