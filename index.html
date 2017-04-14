@@ -35,7 +35,7 @@
           <li><a href="#">Table of Contents</a></li>
           <li><a href="#">Free Chapters</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><button class="btn btn-warning navbar-btn" id="open-popup">BUY NOW</button></li>
+          <li><button class="btn btn-warning navbar-btn" id="open-popup-nav">BUY NOW</button></li>
         </ul>
       </div>
     </nav>
@@ -122,6 +122,7 @@
             document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
         };
 
+        document.getElementById("open-popup-nav").onclick = function() {showMailingPopUp()};
         document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
     </script>
 
